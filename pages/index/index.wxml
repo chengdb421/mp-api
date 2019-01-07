@@ -1,0 +1,2 @@
+<!-- 扫描二维码按钮  -->
+<button class="scanQr" type="primary" bindtap="scanQr">扫描二维码</button>

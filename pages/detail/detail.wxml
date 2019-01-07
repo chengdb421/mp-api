@@ -1,0 +1,38 @@
+<view wx:if="{{product === null}}">
+  <text>加载中...</text>
+</view>
+<view wx:else>
+  <text>商品编号：{{product.id}} \n</text>
+  <text>产品名称：{{product.name}} \n</text>
+  <text>生产日期：{{product.productionDate}} \n</text>
+  <text>标签状态：{{product.labelState}} \n</text>
+</view>
+
+<view class="mark-images">
+  <!-- 标签原图  -->
+  <view class="mark-image-wrap">
+    <image 
+      class="mark-image" 
+      src="{{product.labelThumbnail}}" 
+      mode="aspectFill" 
+      bindtap="handleImagePreview">
+    </image>
+  </view>
+  <!-- 用户拍摄  -->
+  <view class="mark-image-wrap" wx:if="{{shootImage !== null}}">
+    <image 
+      class="mark-image" 
+      src="{{shootImage}}" 
+      mode="aspectFill">
+    </image>
+    <view 
+      class="mark-image-remover" 
+      bindtap="removeImage">删除
+    </view>
+  </view>
+</view>
+
+<!-- 拍摄标签按钮  -->
+<button type="primary" bindtap="chooseImage" wx:if="{{shootImage === null}}">拍摄防伪标签</button>
+<!-- 提交表单按钮  -->
+<button type="primary" bindtap="submitForm" wx:else>检测</button>

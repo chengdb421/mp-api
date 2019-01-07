@@ -1,0 +1,20 @@
+.mark-images {
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.mark-image-wrap {
+  height: 350rpx;
+  width: 100%;
+}
+
+.mark-image {
+  flex: 1;
+  height: 300rpx;
+  width: 300rpx;
+}
+
+.mark-image-remover {
+  text-align: left;
+}

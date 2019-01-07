@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/result/result"
+  ],
+  "window": {
+    "navigationBarTitleText": "防伪验证"
+  },
+  "debug": true
+}

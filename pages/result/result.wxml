@@ -1,0 +1,5 @@
+<image 
+  class="result-image"
+  src="{{image}}" 
+  mode="aspectFill">
+</image>
