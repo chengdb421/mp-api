@@ -1,0 +1,23 @@
+<!--pages/views/home/main.wxml-->
+<view class="wrap" >
+  <view class="table">
+  <block  wx:for="{{rowsData}}"  wx:if="{{item.hasNull===false}}" >
+   <view class="tr noborder"style="height:{{item.height}}px;">
+   <view class="td noborder">
+     <view class="sub-table noborder">
+     <view class="tr noborder"style="height:{{item.height}}px;">
+       <block  wx:for="{{item.cols}}" wx:for-item="col" wx:if="{{col!=undefined}}">
+              <view class="td noborder" style="" >
+        <image src="{{col.photoPath}}" mode="scaleToFill" style="height:{{item.height}}px;" bindtap="navigateTo" data-link="{{col.linkUrl}}"></image>
+       </view>
+       </block>
+
+     </view>
+     </view>
+     </view>
+
+     </view>
+  </block>  
+  </view>
+</view>
+

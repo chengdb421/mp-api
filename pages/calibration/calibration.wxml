@@ -1,0 +1,45 @@
+<view class='wrap'>
+<view class='fillbg'>
+</view>
+  <view class='info top' wx:if='{{!pro.isnothing}}'>
+     <view class='imgarea'>
+     <image src='{{pro.banner}}' mode='aspectFill' lazy-load = "true"></image>
+     </view>
+     <view class='words'>
+      <text class='title'>{{pro.name}}</text>
+      <text class='subtitle'><text class='iconfont icon-erweima1'></text> 官方溯源码:{{pro.id}}</text>
+     </view>
+     <view class='bottom'>
+      <view class='compare'>
+        <view>
+         <image src='{{pro.sourcethumbnail}}' bindtap='onSourceImagePreview'></image>
+         <text>原始图</text>
+        </view>
+        <view>
+         <image src='{{shotImage}}' wx:if='{{shotImage}}' bindtap='onShotImagePreview'></image>
+         <image class='close' src='../../resources/images/close3.png' bindtap='onDelShotImage' wx:if='{{shotImage}}'/>
+         <image src='../../resources/images/camera.png' mode='aspectFit'  wx:if='{{!shotImage}}'  bindtap='onPhotograph'/>
+         <text>拍摄图 <text></text></text>
+        </view>
+      </view>
+       <view class='compareresult' wx:if='{{isCompareResult}}'>
+           <text>检测结果：<text class='lit'>{{conclusion}}</text> [匹配度：{{similarity}}%]</text>
+           <image src='{{compareurl}}' mode='aspectFit' wx:if='{{compareurl}}'  bindtap='onComparedPreview' />
+        </view>
+     <button bindtap='onCompare'><text class='iconfont icon-duibi'></text> 图像检测辨真伪</button>
+     </view>
+  </view>
+
+  <view class='info top nothing'  wx:if='{{pro.isnothing}}'>
+   <view class='imgarea'>
+     <image src='../../resources/images/nothing.jpg' mode='aspectFill' lazy-load = "true"></image>
+    </view>
+     <view class='words'>
+       <text class='subtitle'>查无此产品信息,请确认该产品的真伪！</text>
+     </view>
+  </view>
+  
+  <view class='footer'>
+    <text>copyright©2019 玄知物联网高科技有限公司</text>
+  </view>
+</view>

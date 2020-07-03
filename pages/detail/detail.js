@@ -7,22 +7,35 @@ Page({
     product: null,
     shootImage: null
   },
-
   onLoad: function (options) {
-    console.log(options)
-    this.setData({ labelId: options.id })
-    self = this
+    console.log(options);
+    this.setData({ labelId: options.id });
+    self = this;
+    wx.showLoading({
+      title: '加载中',
+    });
     wx.request({
       url: this.data.url,
       data: { labelId: this.data.labelId },
       success(res) {
         self.setData({
           product: res.data
+        });
+        console.log('success!!');
+      },
+      fail(req){
+        wx.showToast({
+          title: '请求服务器失败',
+          icon: 'fail',
+          duration: 2000
         })
+      },
+      complete(){
+        wx.hideLoading();
+        console.log('complete...');
       }
     })
   },
-
   chooseImage(e) {
     wx.chooseImage({
       count: 1,
@@ -35,7 +48,6 @@ Page({
       }
     })
   },
-
   removeImage(e) {
     this.setData({
       shootImage: null
@@ -51,7 +63,6 @@ Page({
   },
 
   submitForm(e) {
-
     wx.showLoading({
       title: '正在上传...',
       mask: true

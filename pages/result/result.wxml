@@ -1,5 +1,12 @@
+<camera device-position='back' flash='auto' style="width: 100%; height: 600px;">
+
+</camera>
+<!--
 <image 
   class="result-image"
   src="{{image}}" 
   mode="aspectFill">
 </image>
+-->
+
+

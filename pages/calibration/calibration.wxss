@@ -1,0 +1,125 @@
+@import "../../resources/fonts/alifont.wxss"; 
+page{
+  height: 100%;
+
+}
+.wrap{
+  height: 100%;
+}
+.fillbg{
+  background: #8e6803;
+  height: 220px;
+  /*border-radius:0 0 30px 29px;*/
+}
+.top{
+  position:absolute;
+  top: 5px;
+  left:0;
+  right:0;
+  z-index: 9999;
+}
+.info{
+  background: #fff;
+  margin: 10px;
+  padding: 10px 20px 8px 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.4);
+}
+.imgarea image{
+ border-radius: 15px;
+ opacity:0.8;
+ width:100%;
+height:200px;
+}
+.info .words{
+  margin-top:10px;
+}
+.info .title{
+  display:block;
+  font-size: 26px;
+}
+.info .subtitle{
+ display:block;
+font-size:18px;
+color:#646464;
+margin:6px 0 2px 0;
+}
+.info .subtitle text{
+  font-size: 20px;
+}
+.info .bottom{
+  margin: 13px 4px 2px 4px;
+  padding: 18px 10px;
+  border-top: rgb(233,233,233) 1px solid;
+}
+.info .bottom .compare{
+display:table;
+width:100%;
+padding: 2px 0 10px 0;
+}
+.info .bottom .compare view{
+display:table-cell;
+width:50%;
+position: relative;
+}
+.info .bottom .compare view text{
+  display: block;
+  font-size:16px;
+color:rgb(100,100,100);
+}
+.info .bottom .compare image{
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  opacity:0.8;
+}
+.info .bottom .compare .close{
+  position: absolute;
+  top:-15px;
+  right: 0px;
+  width:30px;
+  height: 30px;
+}
+.info .bottom .compareresult{
+margin: 3px 0 10px 0;
+}
+.info .bottom .compareresult text{
+ font-size:16px;
+ color:rgb(100,100,100);
+}
+.info .bottom .compareresult .lit{
+  font-weight: 900;
+  color: #8e6803;
+}
+.bottom button{
+  border-radius: 20px;
+  background: rgb(252,161,23);
+  border:0px;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.6);
+   font-size: 14px;
+}
+.nothing {
+  padding: 30px 10px;
+  z-index: 100;
+  /* display: none;
+  */
+}
+.nothing .imgarea image{
+height:270px;
+}
+.footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding:10px 20px;
+}
+.footer text{
+  font-size: 12px;
+  color: rgb(200,200,200);
+}

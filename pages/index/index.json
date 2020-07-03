@@ -1,4 +1,5 @@
 {
-  "navigationBarTitleText": "防伪验证",
+  "navigationBarTitleText": "",
+  "disableScroll":true,
   "usingComponents": {}
 }

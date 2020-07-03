@@ -1,4 +1,5 @@
-<view wx:if="{{product === null}}">
+
+<view wx:if="{{product === null}}" class="none">
   <text>加载中...</text>
 </view>
 <view wx:else>

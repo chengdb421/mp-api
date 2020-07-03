@@ -1,6 +1,5 @@
 //app.js
 App({
-  
   onLaunch: function () {
     // 登录
     wx.login({
@@ -31,6 +30,23 @@ App({
   },
 
   globalData: {
-    userInfo: null
+    userInfo: null,
+    productInfo: {
+      name: "",
+      id: "",
+      sourcethumbnail:'',
+      sourceimage: "",
+      compareimage: "",
+      similarity:0.0,
+      conclusion:'',
+      isnothing:true
+    }
+  },
+   getUrlParam:function(url, name) {
+     var num = url.indexOf("?")
+     url = url.substr(num);
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = url.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
   }
 })
