@@ -1,6 +1,5 @@
 const host = 'https://www.originsplatform.com:5120'
-//const host = 'http://192.168.1.250:1024'
-const base_api_url='https://originsplatform.com';
+const base_api_url='https://mpapi.originsplatform.com';
 const base_url='https://originsplatform.com';
 
 const config = {

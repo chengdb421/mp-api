@@ -8,10 +8,9 @@
      <view class="tr noborder"style="height:{{item.height}}px;">
        <block  wx:for="{{item.cols}}" wx:for-item="col" wx:if="{{col!=undefined}}">
               <view class="td noborder" style="" >
-        <image src="{{col.photoPath}}" mode="scaleToFill" style="height:{{item.height}}px;" bindtap="navigateTo" data-link="{{col.linkUrl}}"></image>
+        <image src="{{col.photoPath}}" mode="scaleToFill" style="height:{{item.height}}px;" bindtap="onNavigateTo" data-link="{{col.linkUrl}}"></image>
        </view>
        </block>
-
      </view>
      </view>
      </view>
