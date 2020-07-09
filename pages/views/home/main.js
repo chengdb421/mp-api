@@ -18,7 +18,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var id = "18082201397";
+    var id = "19061400001";
     try {
       var qrcode = decodeURIComponent(options.q);
       var paramvalue = this.getUrlParamValue(qrcode, "id");
@@ -27,11 +27,12 @@ Page({
       console.log(error);
     }
     let that = this;
+
     // 获取系统信息
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
-          windowHeight: res.windowHeight
+          windowHeight: res.windowHeight-6
         });
       }
     });

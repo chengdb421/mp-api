@@ -1,8 +1,9 @@
 /* pages/views/home/main.wxss */
-html,body{
-  height: 100%;
+page{
+  height: 100vh;
   margin: 0px;
   padding:0px;
+  overflow-y: hidden;
 }
 .wrap{
   width: 100%;
@@ -14,8 +15,6 @@ html,body{
   box-sizing: border-box;
   width: 100%;
   display: table;
-  overflow: hidden;
-  overflow-y: hidden;
 }
 .tr{
   display: table-row;
