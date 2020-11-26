@@ -1,6 +1,6 @@
-const host = 'https://www.originsplatform.com:5120'
-const base_api_url='https://mpapi.originsplatform.com';
-const base_url='https://originsplatform.com';
+const host = 'https://www.xxxxxx.com:xxxx'
+const base_api_url='https://api.xxxxxx.com';
+const base_url='https://xxxxxx.com';
 
 const config = {
   uploadImageUrl: `${host}/mark/check`,
